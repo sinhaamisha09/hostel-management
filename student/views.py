@@ -19,7 +19,8 @@ def gatepass(request):
         s_contact = request.POST.get('scontact', '')
         p_contact = request.POST.get('pcontact', '')
         items = request.POST.get('items', '')
-        gatepass = Gatepass(student_name=student_name, date_out=date_out, date_in= date_in,reason=reason,address=address,s_contact=s_contact,p_contact=p_contact,items=items)
+        gatepass = Gatepass(student_name=student_name, date_out=date_out, date_in= date_in,reason=reason, 
+        address=address,s_contact=s_contact,p_contact=p_contact,items=items)
         gatepass.save()
         thank = True
         return render(request, 'student/gatepass.html',{'thank':thank})
