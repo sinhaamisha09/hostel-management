@@ -9,19 +9,19 @@
 </head>
 <body>
     <!--Mainmenu-area-->
-    <div class="mainmenu-area" data-spy="affix" data-offset-top="100">
+    <div class="mainmenu-area mb-2" data-spy="affix" data-offset-top="100">
            
         <div class="container">
             <!--Logo-->
             <img src="" alt="" srcset="" height="80px" width="80px;" style="float:left;border-radius: 5px">
            
-            <div class="navbar-header">                       
+            <div class="navbar-header mb-3">                       
                 <a href="#" class="navbar-brand logo">
                     <h1>HOSTEL MANAGEMENT</h1>
                 </a>
             </div>
             <!--Logo/-->
-            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <nav class="mb-1 navbar navbar-expand-lg navbar-light lighten-1" style="background-color: #e3f2fd;">
                 <!-- Navbar content -->
                 <a class="navbar-brand" href="#">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav">
+                  <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                       <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
                     </li>
@@ -40,7 +40,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Application
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink">
                           <a class="dropdown-item" href="#">Leave</a>
                           <a class="dropdown-item" href="#">Gate Pass</a>
                           <a class="dropdown-item" href="#">Others</a>
@@ -50,7 +50,7 @@
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Complaints
                       </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <div class="dropdown-menu dropdown-secondary" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Electricity</a>
                         <a class="dropdown-item" href="#">Room</a>
                         <a class="dropdown-item" href="#">Plumber</a>
@@ -61,17 +61,37 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacts</a>
                     </li>
-                    <li class="nav-item justify-content-end">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-user"></i> Profile </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                          <a class="dropdown-item" href="#">My account</a>
+                          <a class="dropdown-item" href="#">Log out</a>
+                        </div>
+                      </li>
                   </ul>
                 </div>
             </nav>
             <br/>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Apply for Leave</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Apply for Gate Pass</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="">Register Complaint</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="">Modify Details</button>
+
+        </div>
+    </div>
+    <!--Mainmenu-area/-->
+
+
+    <div class="container">    
+        
+        <h2 class=" text-center"> Welcome <span>Student!</span></h2>
+        <br/>
+
+        <div class="row" >
+            <button type="button" class="btn btn-primary col mx-1" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Apply for Leave</button>
+            <button type="button" class="btn btn-primary col mx-1" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Apply for Gate Pass</button>
+            <button type="button" class="btn btn-primary col mx-1" data-toggle="modal" data-target="#exampleModal" data-whatever="">Register Complaint</button>
+            <button type="button" class="btn btn-primary col" data-toggle="modal" data-target="#exampleModal" data-whatever="">Modify Details</button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -101,11 +121,67 @@
                 </div>
             </div>
             </div>
-            <hr />
-            
         </div>
-    </div>
-    <!--Mainmenu-area/-->
+                
+        <div class="row my-2">
+            <div class="container">
+                <p class="row my-2 ">
+                    <a class="btn btn-light col my-1 mr-2 pr-2" data-toggle="collapse" href="#leavetable" role="button" aria-expanded="false" aria-controls="leavetable">Leave Status</a>
+                    <button class="btn btn-light col my-1 mr-2 pl-2" type="button" data-toggle="collapse" data-target="#gatepasstable" aria-expanded="false" aria-controls="gatepasstable">GatePass Status</button>
+                </p>      
+            </div>
+            <div class="row my-2">
+                <div class="col">
+                <div class="collapse multi-collapse" id="leavetable">
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                <div class="col">
+                <div class="collapse multi-collapse" id="gatepasstable">
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>            
+        </div>
+
+        <div class="row">
+
+        </div>   
+    </div> 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
